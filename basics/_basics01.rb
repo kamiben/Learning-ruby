@@ -90,9 +90,6 @@ if __FILE__ == $0
 #end
 
 #----- for... end
-
-
-
-
+#for...
 
 end
