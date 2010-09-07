@@ -75,10 +75,21 @@ if __FILE__ == $0
 #	puts "j vaut moins que 5"
 #end
 
+#----- while... end
+#i = 0
+#while (i < 10)
+#	i += 1
+#	puts i
+#end
 
+#----- until... end
+#i = 0
+#until (i >= 10) # un while à l'envers
+#	i += 1
+#	puts i
+#end
 
-
-
+#----- for... end
 
 
 

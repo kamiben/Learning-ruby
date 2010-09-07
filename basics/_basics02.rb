@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# fichier d'aide concernant les concept de POO de Ruby
+# fichier d'aide concernant les concepts de POO de Ruby
 # auteur : Cirsium
 # créé le 07-09-2010
 # dernière édition le 07-09-2010
