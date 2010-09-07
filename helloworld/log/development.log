@@ -1,0 +1,20 @@
+
+
+Started GET "/" for 127.0.0.1 at 2010-09-07 08:30:19 +0200
+
+ActionController::RoutingError (uninitialized constant WelcomeController):
+  
+
+Rendered C:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-09-07 08:30:53 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-09-07 08:32:01 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
