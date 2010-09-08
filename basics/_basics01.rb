@@ -5,7 +5,7 @@
 # créé le 07-09-2010
 # dernière édition le 07-09-2010
 
-if __FILE__ == $0
+if __FILE__ == $0 #teste si le programme est bien lancé à partir de ce fichier (exemples d'utilisation sur des librairies)
 
 #----- saisie au clavier en mode console
 #saisie = gets # gets attend une chaine entrée par l'utilisateur et validée avec la touche Entrée (Entrée (\n) comprise dans la chaine)
