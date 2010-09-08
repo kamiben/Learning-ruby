@@ -90,6 +90,40 @@ if __FILE__ == $0
 #end
 
 #----- for... end
-#for...
+#for elt in (1..10)
+#	puts elt
+#end
+# autre exemple avec les éléments d'un tableau
+#tab = [1, 2, 3, 4]
+#for elt in tab
+#	puts elt
+#end
+
+#-----each {...}
+#tab = [1, 2, 3, 4]
+#tab.each do | elt |
+#	puts elt
+#end
+
+# syntaxe alternative
+#tab = [1, 2, 3, 4]
+#tab.each { | elt |
+#	puts elt }
+
+# each_byte : parser lun à un les caractères d'une chaine
+#chaine = "ayu"
+#chaine.each_byte do |carac|
+#	ascii_sup = carac + 1
+#	puts ascii_sup.chr
+#end
+
+# each_line : parser ligne par ligne
+#chain = "pierre\npaul\njacques"
+#i = 1
+#chain.each_line do |ligne|
+#	puts "#{i} : #{ligne}"
+#	i += 1
+#end
+
 
 end
