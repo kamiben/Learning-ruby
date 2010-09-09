@@ -26,6 +26,8 @@ class Animal<EtreVivant # la classe Animal hérite de la classe EtreVivant
 	@@total_cree = 0 # variable de classe
 	attr_accessor :parle, :age # création des variables d'instance ainsi que de leurs accesseurs (set et get) | attr_reader si seulement accès en lecture et attr_writer si seulement accès en écriture
 
+	public # à partir de là, tout est public, jusqu'à ce qu'on mette private. tout ce qui suivra alors sera privé.
+	
 	def initialize(parle = ". . .", age = 0) # constructeur
 		@@total_cree += 1
 		@parle = parle # variable d'instance
@@ -56,18 +58,18 @@ end
 
 #--------------------
 #----- redéfinition d'une méthode pour un objet spécifique (méthode singleton)
-class Gus
-	def taille
-		puts "De grande taille"
-	end
-end
+#class Gus
+#	def taille
+#		puts "De grande taille"
+#	end
+#end
 
 #paul = Gus.new
 #jacques = Gus.new
 
-def jacques.taille
-	puts "Tout petit petit"
-end
+#def jacques.taille
+#	puts "Tout petit petit"
+#end
 
 #jacques.taille
 #paul.taille

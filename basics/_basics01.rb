@@ -49,7 +49,7 @@ if __FILE__ == $0 #teste si le programme est bien lancé à partir de ce fichier
 #NOMCONSTANTE ou NomConstante
 #--------------------
 
-#----- if... else... end
+#----- if... elseif... else... end
 #nombre = gets.chomp.to_i # to_i convertit si possible une chaine en integer
 #if (nombre == 42)
 #	puts "bonne reponse"
@@ -223,5 +223,16 @@ if __FILE__ == $0 #teste si le programme est bien lancé à partir de ce fichier
 #end
 #"./".liste_rep
 #--------------------
+
+#----- méthodes de conversion de classe
+# String et Float vers Integer : to_i
+# Float et Integer vers String : to_s
+# String et Integer vers float : to_f
+
+#----- demander si un objet appartient à une classe particulière : objet.is_a(Classe)
+#12.is_a?(Integer)
+
+#----- couper une expression en plusieurs lignes : le dernier caractère de ligne doit être un backslash "\"
+
 
 end
