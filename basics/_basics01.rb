@@ -18,14 +18,16 @@ if __FILE__ == $0 #teste si le programme est bien lancé à partir de ce fichier
 
 #----- création d'un tableau
 #monTableau = ["a", 12, "b"]
+#autreTableau = %w( rouge vert bleu ) # methode qui permet de generer un tableau a partir d'un string
 #puts monTableau[1]
 #monTableau[1] = 42
 #puts monTableau[1]
-# diverses méthodes : push, pop, last, sort
+# diverses méthodes : push, pop, last, sort, size, delete
 
 #----- création de tableau associatif (hash)
 #monHash = {:nom => "Smith", :prenom => "John"}
 #puts monHash[:nom]
+# diverses méthodes : keys, values
 
 #----- manipulation de chaine, tableau et hash
 #maVar = 'azerty'
@@ -49,13 +51,16 @@ if __FILE__ == $0 #teste si le programme est bien lancé à partir de ce fichier
 #NOMCONSTANTE ou NomConstante
 #--------------------
 
-#----- if... elseif... else... end
+#----- if... elsif... else... end
 #nombre = gets.chomp.to_i # to_i convertit si possible une chaine en integer
 #if (nombre == 42)
 #	puts "bonne reponse"
 #else
 #	puts "mauvaise reponse"
 #end
+
+# ---- if statementmodifier --- modifie l'expression qui le precede
+# puts "Aucune voiture n'a été créée." if Car.count.zero? # permet de faire un test en une ligne
 
 #----- case... end
 #nombre = gets.chomp.to_i
@@ -131,6 +136,9 @@ if __FILE__ == $0 #teste si le programme est bien lancé à partir de ce fichier
 #5.times do
 #	puts "XXX"
 #end
+
+#----- upto : incrémente une valeur jusqu'a un parametre donné
+#5.upto(7) { |i| puts i }  # produit 5 6 7 
 
 #--------------------
 #----- sorties de boucles
