@@ -1,0 +1,12 @@
+syntax: glob
+/diggy.bundle
+/diggy/db/*.sqlite3
+/diggy/log/*.log
+/diggy/tmp/**/*
+/diggy/tmp/*
+/diggy/log/*
+*.log
+*.lock
+*.sqlite3
+/helloworld/*.lock
+/helloworld/db/*.sqlite3
