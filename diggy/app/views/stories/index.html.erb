@@ -1,2 +1,3 @@
-<h1>Stories#index</h1>
-<p>Find me in app/views/stories/index.html.erb</p>
+Un lien au pif :
+<a href="<%= @story.link%>"><%=@story.name %></a>
+<%= link_to @story.name, @story.link %>
