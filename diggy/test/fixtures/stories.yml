@@ -1,5 +1,5 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
+#On insère ici quelques données test qui seront utilisées comme base pour tous les test qu'on lancera. Utile pour lancer des tests sur les memes données.
 one:
   name: Mon super blog
   link: http://mercurial.arthion.fr

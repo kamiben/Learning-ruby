@@ -1,5 +1,5 @@
-<%= error_messages_for 'story' %> 
-<% form_for @story do |f| %> 
+<%= error_messages_for 'story' %> <!-- Affichage des messages d'erreur (lors de la regeneration de la page)-->
+<% form_for @story do |f| %>  <!-- Création standard de formulaire contient meme ce qu'il faut pour contrer les xss -->
 <p>
  name:<br />
  <%= f.text_field :name %> 

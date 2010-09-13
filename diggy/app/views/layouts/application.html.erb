@@ -7,17 +7,17 @@
   <head>
      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>Shovell</title> 
-    <%= stylesheet_link_tag 'style' %>
+    <%= stylesheet_link_tag 'style' %> <!-- Inclusion automatique de toutes les css contenant style. Par défaut <%= stylesheet_link_tag :all %> qui charge toutes les css -->
   </head>
   
   <body>
     <div id="content">
        <h1>Shovell</h1> 
-       <% unless flash[:notice].blank? %> 
+       <% unless flash[:notice].blank? %> <!-- Code erb de pour tester s'il y a un flash a afficher -->
 	   <div id="notification"><%= flash[:notice] %></div> 
        <% end %>
-       <%= yield %>
-    </div>
+       <%= yield %>   <!-- Code erb pour afficher la view de la page sur laquelle on se trouve -->
+    </div> 
   </body> 
-  
+
 </html>

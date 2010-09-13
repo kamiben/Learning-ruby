@@ -2,10 +2,10 @@
 #  get "stories/index"
 #  get "stories/new"
 
-ActionController::Routing::Routes.draw do |map|
- map.resources :stories
- map.connect ':controller/:action/:id'
- map.connect ':controller/:action/:id.:format'
+ActionController::Routing::Routes.draw do |map| # Attention pas terrible pour rails3
+ map.resources :stories # Inclure des resources supplémentaires pour stories dans les routes, permet donc l'acces via url à : index (utilisé), new(utilisé), create (utilisé), show, edit, update, destroy
+ map.connect ':controller/:action/:id' # Attention pas top rail3
+ map.connect ':controller/:action/:id.:format' #idem
 
 
 
