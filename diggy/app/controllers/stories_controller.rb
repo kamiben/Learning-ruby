@@ -16,4 +16,9 @@ class StoriesController < ApplicationController
       render :action => 'new' # Genere a nouveau la vue avec les anciens parametres, pour que l'utilisateur ne les rentre pas à nouveau
     end
   end
+  
+  #Show: affiche une story en particulier
+  def show
+    @story = Story.find(params[:id]) # place dans l'objet @story accessible par la vue les infos de la story[id]
+  end
 end

@@ -1,3 +1,4 @@
 Un lien au pif :
-<a href="<%= @story.link%>"><%=@story.name %></a> <!-- Première maniere de faire des liens, un peu chiant -->
-<%= link_to @story.name, @story.link %> <!-- Deuxieme méthode, qui crée le meme lien : beaucoup mieux ! -->
+<a href="<%= @story.link%>"><%=@story.name %></a> <br/><!-- Première maniere de faire des liens, un peu chiant -->
+<%= link_to @story.name, story_path(@story) %> <br/> <!-- Deuxieme méthode, qui crée le meme lien : beaucoup mieux ! Au lieu de pointer vers le link, on pointe vers la page de la story-->
+<%= link_to @story.name, @story %> <!-- Et encore plus court !!-->
