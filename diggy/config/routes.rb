@@ -1,5 +1,13 @@
-Shovell::Application.routes.draw do
-  get "stories/index"
+#Shovell::Application.routes.draw do
+#  get "stories/index"
+#  get "stories/new"
+
+ActionController::Routing::Routes.draw do |map|
+ map.resources :stories
+ map.connect ':controller/:action/:id'
+ map.connect ':controller/:action/:id.:format'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
