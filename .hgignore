@@ -8,5 +8,6 @@ syntax: glob
 *.log
 *.lock
 *.sqlite3
+tmp
 /helloworld/*.lock
 /helloworld/db/*.sqlite3
