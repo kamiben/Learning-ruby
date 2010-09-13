@@ -16,3 +16,7 @@ body {
  padding: 5px;
  margin: 10px 0; 
 }
+
+.field_with_errors {
+ border: 5px solid #f66; 
+} 

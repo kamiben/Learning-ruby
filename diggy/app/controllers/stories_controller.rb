@@ -8,9 +8,12 @@ class StoriesController < ApplicationController
   end
   
   def create
-  @story = Story.new(params[:story])
-  @story.save
-  flash[:notice] = 'Story submission succeeded'
-  redirect_to stories_path
+    @story = Story.new(params[:story])
+    if @story.save
+    	flash[:notice] = 'Story submission succeeded'
+    	redirect_to stories_path
+    else
+      render :action => 'new'
+    end
   end
 end
