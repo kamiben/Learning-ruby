@@ -3,7 +3,10 @@
 # fichier d'aide concernant les concepts de POO de Ruby
 # auteur : Cirsium
 # créé le 07-09-2010
-# dernière édition le 07-09-2010
+# dernière édition le 12-09-2010
+
+# notes de mise à jour :
+		# néant
 
 module ModTest # sorte de classe qui ne peut pas être instanciée
 	
@@ -46,33 +49,33 @@ class Animal<EtreVivant # la classe Animal hérite de la classe EtreVivant
 #		return @age
 #	end
 	
-#	def parle=(parole) # variante de l'accesseur set
-#		@parole = parole
-#	end
+	def parle=(parole) # variante de l'accesseur set
+		@parole = parole
+	end
 
-#	def parle # variante de l'accesseur get
-#		return @parole
-#	end
+	def parle # variante de l'accesseur get
+		return @parole
+	end
 
 end
 
 #--------------------
 #----- redéfinition d'une méthode pour un objet spécifique (méthode singleton)
-#class Gus
-#	def taille
-#		puts "De grande taille"
-#	end
-#end
+class Gus
+	def taille
+		puts "De grande taille"
+	end
+end
 
-#paul = Gus.new
-#jacques = Gus.new
+paul = Gus.new
+jacques = Gus.new
 
-#def jacques.taille
-#	puts "Tout petit petit"
-#end
+def jacques.taille
+	puts "Tout petit petit"
+end
 
-#jacques.taille
-#paul.taille
+jacques.taille
+paul.taille
 #--------------------
 
 if __FILE__ == $0
