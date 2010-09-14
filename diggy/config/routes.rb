@@ -1,9 +1,9 @@
 #Shovell::Application.routes.draw do
-  get "sessions/new"
+ # get "sessions/new"
 
-  get "sessions/create"
+ # get "sessions/create"
 
-  get "sessions/destroy"
+ # get "sessions/destroy"
 
  # get "votes/create"
 
@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map| # Attention pas terrible pour ra
  # has_many permet quand à lui de lier la vue vote a la vue story, un vote ne sera maintenant accessible que via /story/vote et plus via /vote
  map.connect ':controller/:action/:id' # Attention pas top rail3
  map.connect ':controller/:action/:id.:format' #idem
-
+ map.resource :session
 
 
   # The priority is based upon order of creation:
