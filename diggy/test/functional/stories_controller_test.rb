@@ -49,4 +49,40 @@ end
     assert_select 'ul#vote_history li', :count => 2 # element ul avec l'id vote_history contenant deux elements (les deux votes du test)
     assert_select 'div#vote_form form' # element div avec l'id vote_form avec un form a l'intérieur
   end
+  
+  
+  def test_should_show_story_submitter
+    get :show, :id => stories(:one)
+    assert_select 'p.submitted_by span', 'patrick'
+  end
+
+  def test_should_indicate_not_logged_in
+    get :index
+    assert_select 'div#login_logout em', 'Not logged in.'
+  end
+
+  def test_should_show_navigation_menu
+    get :index
+    assert_select 'ul#navigation li', 2
+  end
+  
+  def test_should_indicate_logged_in_user
+    get_with_user :index
+    assert_equal users(:patrick), assigns(:current_user)
+    assert_select 'div#login_logout em a', '(Logout)' 
+  end
+  
+  def test_should_redirect_if_not_logged_in
+    get :new
+    assert_response :redirect
+    assert_redirected_to new_session_path
+  end
+
+  def test_should_store_user_with_story
+    post_with_user :create, :story => {
+      :name => 'story with user',
+      :link => 'http://www.story-with-user.com/'
+    }
+    assert_equal users(:patrick), assigns(:story).user
+  end
 end
