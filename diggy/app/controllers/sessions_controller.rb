@@ -15,6 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
+    @current_user = nil # suppression des infos de session en local et sur le browser distant
   end
 
 end

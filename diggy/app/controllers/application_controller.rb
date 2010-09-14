@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+ # protect_from_forgery
   
   before_filter :fetch_logged_in_user # Filtre : la méthode mise en lien sera systématiquement effectuée avant chaque appel de controlleur
   

@@ -33,6 +33,10 @@
        <% end %>
        <%= yield %>   <!-- Code erb pour afficher la view de la page sur laquelle on se trouve -->
     </div> 
+    <ul id="navigation">
+      <li><%= link_to 'Front page stories', stories_path %></li>
+      <li><%= link_to 'Submit a new story!', new_story_path %></li>
+    </ul>
   </body> 
 
 </html>
