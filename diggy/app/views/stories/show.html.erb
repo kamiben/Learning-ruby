@@ -9,6 +9,6 @@
 </p> 
 <div id="vote_form"> 
   <% form_tag story_votes_path(@story), :remote => true  do %> <!-- form__tag :remote=>true crée l'interaction ajax, traitement identique a un formulaire, attention spécifique à rails 3, voir http://www.simonecarletti.com/blog/2010/06/unobtrusive-javascript-in-rails-3/ -->
-    <%= submit_tag 'shove it' %> 
+    <%= submit_tag 'Voter' %> 
   <% end %> 
 </div>
