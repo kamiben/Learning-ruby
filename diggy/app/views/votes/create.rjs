@@ -1,0 +1,7 @@
+# premiere approche du rjs : je fais quelle action sur quel element
+#page.replace_html 'vote_score', "Score: #{@story.votes.size}" 
+#page.visual_effect 'vote_score', :highlight
+
+#deuxieme approche : sur quel élément je fais quelle action
+page[:vote_score].replace_html "Score: #{@story.votes.size}" # on note l'utilisation de #{} pour appeller ruby dans le string
+page[:vote_score].visual_effect :highlight 
