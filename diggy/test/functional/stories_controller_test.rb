@@ -10,19 +10,19 @@ class StoriesControllerTest < ActionController::TestCase
 
 
 def test_should_show_new
- get :new
+ get_with_user :new
  assert_response :success
  assert_template 'new'
  assert_not_nil assigns(:story) 
 end 
 
 def test_should_show_new_form # Vérifie la présence de form dans lequel il y a 3 <p>
- get :new
+ get_with_user :new
  assert_select 'form p', :count => 3 
 end 
 
 def test_should_add_story
- post :create, :story => { # simule un envoi de données
+ post_with_user :create, :story => { # simule un envoi de données
  :name => 'test story',
  :link => 'http://www.test.com/'
  }
@@ -32,7 +32,7 @@ def test_should_add_story
 end 
 
 def test_should_reject_missing_story_attribute #
- post :create, :story => { :name => 'story without a link' }
+ post_with_user :create, :story => { :name => 'story without a link' }
  assert assigns(:story).errors.on(:link) 
 end 
 
