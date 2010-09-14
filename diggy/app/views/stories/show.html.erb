@@ -4,6 +4,15 @@
   </span>
   <%= @story.name %>
 </h2> 
+
+<ul id="vote_history"><!-- On va lister tous les votes dans une liste non ordonnée-->
+  <% if @story.votes.empty? %> <!-- test si une histoire n'a aucun vote associé-->
+    <em>Aucun votes pour le moment</em>
+  <% else %>
+    <%= render :partial => 'votes/vote', :collection => @story.votes.latest %><!-- on crée une page partielle pour chacun des votes (via l'option :collection -->
+  <% end %> 
+</ul> 
+
 <p>
   <%= link_to @story.link, @story.link %>
 </p> 
