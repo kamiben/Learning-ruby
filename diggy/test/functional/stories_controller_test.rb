@@ -35,4 +35,18 @@ def test_should_reject_missing_story_attribute #
  post :create, :story => { :name => 'story without a link' }
  assert assigns(:story).errors.on(:link) 
 end 
+
+  def test_should_show_story
+    get :show, :id => stories(:one) # methode get pour récuperer la premiere story 
+    assert_response :success
+    assert_template 'show' # verifie que le bon template est utilisé
+    assert_equal stories(:one), assigns(:story) # verifie que la bonne story est renvoyée
+  end
+  
+  def test_should_show_story_vote_elements
+    get :show, :id => stories(:one)
+    assert_select 'h2 span#vote_score' # verifie la présence d'un element  span avec l'id vote_score
+    assert_select 'ul#vote_history li', :count => 2 # element ul avec l'id vote_history contenant deux elements (les deux votes du test)
+    assert_select 'div#vote_form form' # element div avec l'id vote_form avec un form a l'intérieur
+  end
 end
