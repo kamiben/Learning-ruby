@@ -10,7 +10,7 @@ class StoriesController < ApplicationController
   end
   
   def create # Appelé lors du post sur la vue new, enregistre les données
-    @story = Story.new(params[:story]) # récupère les parametres envoyés par post, on filtre ceux qui sont utile (:story)
+    @story = @current_user.stories.build (params[:story]) # stocke l'histoire d'un user en récupèrant les parametres envoyés par post, on filtre ceux qui sont utile (:story)
     if @story.save # enregistre la nouvelle story dans la base de données, et renvoie un flash de succès
     	flash[:notice] = 'Story submission succeeded'
     	redirect_to stories_path # redirection vers l'index une fois l'enregistrement effectué, le flash sera dessus
