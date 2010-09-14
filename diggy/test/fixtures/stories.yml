@@ -3,7 +3,9 @@
 one:
   name: Mon super blog
   link: http://mercurial.arthion.fr
+  user: patrick
 
 two:
   name: Un autre site pas mal
   link: http://www.google.fr
+  user: patrick
