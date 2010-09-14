@@ -18,4 +18,18 @@ class StoryTest < ActiveSupport::TestCase
     :link => 'http://www.testsubmission.com/')
     assert  s.valid? 
   end 
+  
+  def test_should_have_a_votes_association
+    assert_equal [ votes(:two),votes(:one) ],
+    stories(:one).votes # Crée un tableau contenant les deux votes et compare au résultat des votes enregistrés pour l'objet
+  end 
+  
+  def test_should_return_highest_vote_id_first
+   assert_equal votes(:one), stories(:one).votes.latest.first # Vérifie si le vote retourné est bien le dernier enregistré
+  end
+  
+  def test_should_return_3_latest_votes
+    10.times { stories(:one).votes.create } # crée 10 votes
+    assert_equal 3, stories(:one).votes.latest.size # verifie qu'on en renvoie 3
+  end
 end
