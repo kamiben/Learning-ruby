@@ -1,7 +1,8 @@
 class VotesController < ApplicationController
+  before_filter :login_required
   def create
     @story = Story.find(params[:story_id]) # On retrouve la bonne story via son id
-    @story.votes.create # on lui ajoute un vote
+    @story.votes.create(:user => @current_user) # on lui ajoute un vote
     
     respond_to do |format| 
       format.html { redirect_to @story } 
