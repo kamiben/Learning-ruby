@@ -1,4 +1,6 @@
 #Shovell::Application.routes.draw do
+  get "users/show"
+
  # get "sessions/new"
 
  # get "sessions/create"
@@ -16,6 +18,7 @@ ActionController::Routing::Routes.draw do |map| # Attention pas terrible pour ra
  map.connect ':controller/:action/:id' # Attention pas top rail3
  map.connect ':controller/:action/:id.:format' #idem
  map.resource :session
+ map.resources :users
  map.root :controller => "stories"
 
   # The priority is based upon order of creation:
