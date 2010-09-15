@@ -80,3 +80,10 @@ background-color: #aea;
 #navigation li a {
  color: #fff;
 }
+
+.story {
+ float: left;
+ width: 50%; 
+} 
+.story h3 { margin-bottom: 0; } 
+.story p  { color: #666; } 

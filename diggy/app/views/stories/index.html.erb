@@ -1,4 +1,4 @@
-Un lien au pif :
-<a href="<%= @story.link%>"><%=@story.name %></a> <br/><!-- Première maniere de faire des liens, un peu chiant -->
-<%= link_to @story.name, story_path(@story) %> <br/> <!-- Deuxieme méthode, qui crée le meme lien : beaucoup mieux ! Au lieu de pointer vers le link, on pointe vers la page de la story-->
-<%= link_to @story.name, @story %> <!-- Et encore plus court !!-->
+<h2>
+ <%= "Montre #{ pluralize(@stories.size, 'story') }" %> <!-- pluzalize conjugue automatiquement story en fonciton de stroy.size, on peut lui passer la forme pluriel et troisieme arg -->
+</h2> 
+<%= render :partial => 'story', :collection => @stories %><!-- On utilise une vue partielle pour afficher toutes les story selectionénes, version abregée : render :partial => @stories -->

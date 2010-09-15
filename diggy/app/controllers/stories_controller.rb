@@ -1,8 +1,8 @@
 class StoriesController < ApplicationController
 
   before_filter :login_required, :only => [:new, :create] # On applique le filtre pour forcer la connexion uniquement sur les pages new et create
-  def index # Renvoie une story aléatoire à la vue pour affichage en utilisant la classe Story (<activerecord)
-    @story = Story.find(:first, :order => 'RANDOM()') #:order peut prendre ASC, DESC, ou RANDOM()
+  def index # Renvoie les story avec plus de 5 votes à la vue pour affichage en utilisant la classe Story (<activerecord)
+    @stories = Story.find :all, :order => 'id DESC', :conditions => 'votes_count >= 5' #:order peut prendre ASC, DESC, ou RANDOM()
   end
 
   def new  # Création d'une nouvelle story, nécéssaire pour que la vue aie un objet ou stocker ses données.

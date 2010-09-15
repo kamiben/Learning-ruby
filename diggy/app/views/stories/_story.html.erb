@@ -1,0 +1,7 @@
+<% div_for(story) do %> <!-- Crée automatiquement un div pour l'objet  ex: <div id="story_2" class="story>-->
+  <h3><%= link_to story.name, story %></h3>
+  <p>
+    Submitted by: <%= story.user.login %> |
+    Score: <%= story.votes_count %>
+  </p>
+<% end %>

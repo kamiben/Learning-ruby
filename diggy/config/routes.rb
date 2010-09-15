@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map| # Attention pas terrible pour ra
  map.connect ':controller/:action/:id' # Attention pas top rail3
  map.connect ':controller/:action/:id.:format' #idem
  map.resource :session
-
+ map.root :controller => "stories"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -67,7 +67,7 @@ ActionController::Routing::Routes.draw do |map| # Attention pas terrible pour ra
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  # root :to => "stories"
 
   # See how all your routes lay out with "rake routes"
 
