@@ -11,7 +11,7 @@
 #  get "stories/new"
 
 ActionController::Routing::Routes.draw do |map| # Attention pas terrible pour rails3
- map.resources :stories, :has_many => :votes # Inclure des resources supplémentaires pour stories dans les routes, permet donc l'acces via url à : index (utilisé), new(utilisé), create (utilisé), show, edit, update, destroy
+ map.resources :stories, :has_many => :votes, :collection => {:bin=>:get} # Inclure des resources supplémentaires pour stories dans les routes, permet donc l'acces via url à : index (utilisé), new(utilisé), create (utilisé), show, edit, update, destroy
  # has_many permet quand à lui de lier la vue vote a la vue story, un vote ne sera maintenant accessible que via /story/vote et plus via /vote
  map.connect ':controller/:action/:id' # Attention pas top rail3
  map.connect ':controller/:action/:id.:format' #idem

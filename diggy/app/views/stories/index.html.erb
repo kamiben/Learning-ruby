@@ -1,4 +1,4 @@
 <h2>
- <%= "Montre #{ pluralize(@stories.size, 'story') }" %> <!-- pluzalize conjugue automatiquement story en fonciton de stroy.size, on peut lui passer la forme pluriel et troisieme arg -->
+ <%= story_list_heading %> <!-- pluzalize conjugue automatiquement story en fonciton de stroy.size, on peut lui passer la forme pluriel et troisieme arg -->
 </h2> 
 <%= render :partial => 'story', :collection => @stories %><!-- On utilise une vue partielle pour afficher toutes les story selectionénes, version abregée : render :partial => @stories -->
