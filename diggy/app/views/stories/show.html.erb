@@ -25,6 +25,14 @@
 <p>
   <%= link_to @story.link, @story.link %>
 </p> 
+
+<% unless @story.tag_list.empty? %>
+  <p class="tags">
+    <strong>Tags:</strong>
+    <%= @story.tag_list %>
+  </p>
+<% end %>
+
 <% if logged_in? %>
 <div id="vote_form"> 
   <% form_tag story_votes_path(@story), :remote => true  do %> <!-- form__tag :remote=>true crée l'interaction ajax, traitement identique a un formulaire, attention spécifique à rails 3, voir http://www.simonecarletti.com/blog/2010/06/unobtrusive-javascript-in-rails-3/ -->

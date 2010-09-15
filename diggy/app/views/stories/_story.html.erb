@@ -3,5 +3,8 @@
   <p>
     Submitted by: <%= story.user.login %> |
     Score: <%= story.votes_count %>
+    <% unless story.tag_list.empty? %>
+    Tags: <%= story.tag_list %>
+    <% end %>
   </p>
 <% end %>
