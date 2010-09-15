@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100915064509) do
+ActiveRecord::Schema.define(:version => 20100915083720) do
 
   create_table "stories", :force => true do |t|
     t.string   "name"
@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(:version => 20100915064509) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "votes_count", :default => 0
+    t.integer  "votes_count",  :default => 0
+    t.text     "descriptions"
   end
 
   create_table "users", :force => true do |t|
