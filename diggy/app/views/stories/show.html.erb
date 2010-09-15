@@ -29,7 +29,7 @@
 <% unless @story.tag_list.empty? %>
   <p class="tags">
     <strong>Tags:</strong>
-    <%= @story.tag_list %>
+    <%= render :partial => @story.tags %> <!-- Rendu des tags avec vue partielle pour les rendre clicable-->
   </p>
 <% end %>
 
