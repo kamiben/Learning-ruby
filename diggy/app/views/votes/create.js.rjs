@@ -3,6 +3,6 @@
 #page.visual_effect 'vote_score', :highlight
 
 #deuxieme approche : sur quel élément je fais quelle action
-page[:vote_score].replace_html "Score: #{@story.votes.size}" # on note l'utilisation de #{} pour appeller ruby dans le string
+page[:vote_score].replace_html "Score: #{@story.reload.votes.size}" # on note l'utilisation de #{} pour appeller ruby dans le string
 page[:vote_score].visual_effect :highlight 
 page[:vote_history].replace_html :partial => 'vote', :collection => @story.votes.latest
