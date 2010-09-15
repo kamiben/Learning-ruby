@@ -1,4 +1,5 @@
 class Story < ActiveRecord::Base
+  acts_as_taggable
   after_create :create_initial_vote # callback qui ajotue un vote apres creation d'une story
   belongs_to :user
   validates_presence_of :name, :link #Validation de la présence des paramètres name et link. Sans cette validation il était possible d'entrer un enregistrement sans nom ou lien
