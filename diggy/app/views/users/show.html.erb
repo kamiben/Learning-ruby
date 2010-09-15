@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2>Stories submitted by <%= @user.name %></h2> 
+<div id="stories_submitted">
+ <%= render :partial => @stories_submitted %> <!-- Notation abrégée pour appellée la vue partielle, qui sera la vue _story (on passe une collection de story) -->
+</div> 
+<h2>Stories voted for by <%= @user.name %></h2> 
+<div id="stories_voted_on">
+ <%= render :partial => @stories_voted_on %> 
+</div> 
